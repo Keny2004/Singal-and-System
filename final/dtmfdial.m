@@ -28,7 +28,8 @@ amp=10; %輸出聲音大小
 xx1=amp*(cos(2*pi*A*tt)+cos(2*pi*B*tt)); %將找出的兩個頻率合成
 xx2=[xx2 sil xx1]; %將合成音與間隔音加到xx2陣列
 end
-xx=xx2(2:end);
+xx=xx2(2:end); %將xx2存回xx，由於xx2第一個元素是0所以從第2元素開始
+
 
 
 
