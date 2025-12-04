@@ -8,7 +8,7 @@ function keys_number = dtmfrun(xx,L,fs)
                  '7','8','9','C';
                  '*','0','#','D'];
 
-    hh = dtmfdesign( center_freqs,L,fs );
+    hh = dtmfdesign( center_freqs,L,fs ); %設計每個頻率的濾波器
     [nstart,nstop] = dtmfcut(xx,fs);  
     keys_number = []; 
 
@@ -29,3 +29,4 @@ function keys_number = dtmfrun(xx,L,fs)
         end
     end
 end
+
