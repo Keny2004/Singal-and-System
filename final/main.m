@@ -1,11 +1,14 @@
 fs = 8000;       
 L = 80;          
-string = 10;   %隨機產生10個按鍵
 
-%隨機產生字串
-char = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','*','#'];
-randomnum = randi(length(char), 1,string); %randomnum陣列內容為char的index
-tk = char(randomnum); %將index轉為char陣列字元，並存到tk
+dict = ['A','B','C','D','*','#','0','1','2','3','4','5','6','7','8','9'];
+start_num = 1;
+end_num = 16;
+min_len = 1;
+max_len = 25;
+len = floor((max_len-min_len).*rand(1,1) + min_len);%隨機產生字串長度
+r = floor((end_num-start_num).*rand(1,len) + start_num);%隨機產生字串內容
+tk = dict(r)%字串
 
 fprintf('\n');
 fprintf('隨機產生的字串: %s\n', tk);
@@ -24,4 +27,5 @@ else
     fprintf('Result = Error\n');
 
 end
+
 
