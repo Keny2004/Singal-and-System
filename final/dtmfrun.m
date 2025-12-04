@@ -16,6 +16,7 @@ function keys_number = dtmfrun(xx,L,fs)
         x_seg = xx(nstart(kk):nstop(kk)); %逐段剪出音訊
         
         scores = zeros(1, 8);
+        %找出該音訊含有那些頻率
         for i = 1:8
             scores(i) = dtmfscore(x_seg, hh(:, i));
         end
@@ -29,6 +30,7 @@ function keys_number = dtmfrun(xx,L,fs)
         end
     end
 end
+
 
 
 
