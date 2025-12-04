@@ -2,7 +2,7 @@ function [nstart,nstop] = dtmfcut(xx,fs)
 %DTMFCUT   find the DTMF tones within x[n]
 %  usage:
 %       [nstart,nstop] = dtmfcut(xx,fs)
-%
+%aaa
 %   length of nstart = M = number of tones found
 %      nstart is the set of STARTING indices
 %      nstop is the set of ENDING indices
