@@ -23,13 +23,15 @@ function keys_number = dtmfrun(xx,L,fs)
         
         row_idx = find(scores(1:4));
         col_idx = find(scores(5:8));
-        
+
+        %查表找出對應按鍵
         if length(row_idx) == 1 && length(col_idx) == 1
              decoded_key = dtmf_keys(row_idx, col_idx);
              keys_number = [keys_number, decoded_key];
         end
     end
 end
+
 
 
 
