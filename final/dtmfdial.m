@@ -14,6 +14,7 @@ dtmf.keys =['1','2','3','A';
 dtmf.colTones = [1209,1336,1477,1633];
 dtmf.rowTones = [697,770,852,941];
 
+%播放亂數產生的keyNames
 tt=0:1/fs:0.2;
 sil=zeros(1,fix(fs/100*2));
 % xx=zeros(1,length(tt)*length(keyNames));
@@ -28,4 +29,5 @@ xx1=amp*(cos(2*pi*A*tt)+cos(2*pi*B*tt));
 xx2=[xx2 sil xx1];
 end
 xx=xx2(2:end);
+
 
