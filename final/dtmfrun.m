@@ -13,7 +13,7 @@ function keys_number = dtmfrun(xx,L,fs)
     keys_number = []; 
 
     for kk=1:length(nstart)
-        x_seg = xx(nstart(kk):nstop(kk));
+        x_seg = xx(nstart(kk):nstop(kk)); %逐段剪出音訊
         
         scores = zeros(1, 8);
         for i = 1:8
@@ -29,5 +29,6 @@ function keys_number = dtmfrun(xx,L,fs)
         end
     end
 end
+
 
 
