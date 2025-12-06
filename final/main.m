@@ -15,7 +15,7 @@ fprintf('隨機產生的字串: %s\n', tk);
 
 %合成與播放
 xx = dtmfdial(tk, fs);%呼叫把頻率合成的函式
-soundsc(xx, fs);%把合成出來的xx播放出來
+soundsc(xx, fs);%播放合成的xx
 
 %解碼
 decoded = dtmfrun(xx, L, fs); 
@@ -24,8 +24,10 @@ fprintf('系統解碼結果: %s\n', decoded);
 if strcmp(tk, decoded)
     fprintf('成功解碼\n');
 else
-    fprintf('解碼失敗\n');
+    fprintf('解碼失敗\n');
+
 end
 fprintf('-------------------------------------\n');
+
 
 
