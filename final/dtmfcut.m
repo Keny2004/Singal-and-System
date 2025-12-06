@@ -23,7 +23,7 @@ xx = diff(xx>setpoint); %找出靜音到按鍵音的變化點
 jkl = find(xx~=0)'; %儲存所有變化點的index
 %xx(jkl);
 if xx(jkl(1))<0, jkl = [1;jkl];  end %如果第一個是下降點，插入1作為起始位置
-if xx(jkl(end))>0, jkl = [jkl;Lx]; end %如果最後一個是上升點，插入0作為結束位置
+if xx(jkl(end))>0, jkl = [jkl;Lx]; end %如果最後一個是上升點，插入-1作為結束位置
 %jkl=[start1, stop1, start2, stop2, start3, stop3 ...]
 
 %分割起始、結束點
